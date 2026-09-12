@@ -82,7 +82,7 @@ command_not_found_handler() {
   full_cmd="$(printf '%q ' "${effective_cmd[@]}")"
   full_cmd="${full_cmd% }"
 
-  kimi -c "$full_cmd"
+  kimi -c -p "$full_cmd"
   return $?
 }
 
